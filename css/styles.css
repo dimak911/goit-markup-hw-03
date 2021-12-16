@@ -1,0 +1,215 @@
+/* основная палитра*/
+:root {
+  --prime-color: #2196f3;
+  --header-color: #212121;
+  --main-text-color: #757575;
+  --secondary-text-color: #ffffff;
+  --prime-background-color: #2f303a;
+  --secondary-background-color: #f5f4fa;
+}
+
+/* основной шрифт и цвет */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+/* сброс стиля у списка */
+.list {
+  list-style: none;
+}
+
+/* логотип */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-text {
+  color: var(--prime-color);
+}
+
+.logo-text-header {
+  color: var(--header-color);
+}
+.logo-text-footer {
+  color: var(--secondary-text-color);
+}
+
+/* главное меню */
+.main-menu-item {
+  color: var(--header-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.main-menu-item:hover,
+.main-menu-item:focus {
+  color: var(--prime-color);
+}
+
+.contacts-item {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts-item:hover,
+.contacts-item:focus,
+.address-contacts-item:hover,
+.address-contacts-item:focus,
+.address:hover,
+.address:focus {
+  color: var(--prime-color);
+}
+
+/* герой */
+.hero {
+  background-color: var(--prime-background-color);
+}
+
+.hero-text {
+  color: var(--secondary-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-button {
+  color: var(--secondary-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+
+  background-color: var(--prime-color);
+}
+
+/* список особенностей */
+
+/* скрытый заголовок */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.features-header {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--header-color);
+}
+
+.features-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* сервисы */
+.services-header,
+.team-header {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+}
+
+/* комманда */
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+}
+
+.team-position {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+/* страница портфолио */
+
+/* фильтр */
+.filter-button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  cursor: pointer;
+
+  background-color: var(--secondary-background-color);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--secondary-text-color);
+
+  background-color: var(--prime-color);
+}
+
+/* примеры работ */
+
+.work-header {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--header-color);
+}
+
+.work-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+/* футер */
+.footer {
+  background-color: var(--prime-background-color);
+}
+
+.address {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.address-contacts-item {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
