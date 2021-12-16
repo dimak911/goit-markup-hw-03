@@ -19,10 +19,49 @@ body {
 /* сброс стиля у списка */
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* шапка */
+.header {
+  display: flex;
+  align-items: center;
+
+  outline: 1px solid red;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+
+  outline: 1px solid green;
+}
+
+.main-menu {
+  display: flex;
+
+  outline: 1px solid yellow;
+}
+
+.contacts-header {
+  display: flex;
+  margin-left: auto;
+  outline: 1px solid blue;
 }
 
 /* логотип */
 .logo {
+  margin-right: 93px;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -44,6 +83,10 @@ body {
 
 /* главное меню */
 .main-menu-item {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--header-color);
   text-decoration: none;
   font-weight: 500;
@@ -52,12 +95,21 @@ body {
   letter-spacing: 0.02em;
 }
 
+.main-menu li:not(:last-child),
+.contacts-header li:not(:last-child) {
+  margin-right: 50px;
+}
+
 .main-menu-item:hover,
 .main-menu-item:focus {
   color: var(--prime-color);
 }
 
 .contacts-item {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   text-decoration: none;
   color: var(--main-text-color);
   font-weight: 500;
