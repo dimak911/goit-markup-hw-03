@@ -11,8 +11,6 @@
 /* основной шрифт и цвет */
 body {
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   color: var(--main-text-color);
 }
 /* 
@@ -70,9 +68,6 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.logo-text {
   color: var(--prime-color);
 }
 
@@ -84,7 +79,7 @@ body {
 }
 
 /* главное меню */
-.main-menu-item {
+.main-menu-link {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -102,12 +97,12 @@ body {
   margin-right: 50px;
 }
 
-.main-menu-item:hover,
-.main-menu-item:focus {
+.main-menu-link:hover,
+.main-menu-link:focus {
   color: var(--prime-color);
 }
 
-.contacts-item {
+.contacts-link {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -120,12 +115,12 @@ body {
   letter-spacing: 0.02em;
 }
 
-.contacts-item:hover,
-.contacts-item:focus,
-.address-contacts-item:hover,
-.address-contacts-item:focus,
-.address:hover,
-.address:focus {
+.contacts-link:hover,
+.contacts-link:focus,
+.address-contacts-link:hover,
+.address-contacts-link:focus,
+.address-link:hover,
+.address-link:focus {
   color: var(--prime-color);
 }
 
@@ -262,17 +257,19 @@ body {
 }
 
 .address {
-  text-decoration: none;
   font-style: normal;
+}
+
+.address-link {
+  text-decoration: none;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
-.address-contacts-item {
+.address-contacts-link {
   text-decoration: none;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
