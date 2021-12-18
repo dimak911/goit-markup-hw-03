@@ -2,10 +2,13 @@
 :root {
   --prime-color: #2196f3;
   --header-color: #212121;
+  --header-border-color: #ececec;
   --main-text-color: #757575;
   --secondary-text-color: #ffffff;
   --prime-background-color: #2f303a;
   --secondary-background-color: #f5f4fa;
+
+  --work-item-gap: 30px;
 }
 
 /* основной шрифт и цвет */
@@ -38,8 +41,18 @@ body {
   margin-right: auto;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* шапка */
+
 .header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header-box {
   display: flex;
   align-items: center;
 }
@@ -126,12 +139,13 @@ body {
 
 /* герой */
 .hero {
+  background-color: var(--prime-background-color);
+}
+
+.hero.container {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 94px;
-
-  background-color: var(--prime-background-color);
 }
 
 .hero-text {
@@ -147,6 +161,8 @@ body {
 }
 
 .hero-button {
+  all: unset;
+
   padding: 10px 32px;
 
   color: var(--secondary-text-color);
@@ -166,6 +182,11 @@ body {
 /* список особенностей */
 
 /* скрытый заголовок */
+
+.features {
+  display: flex;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -174,7 +195,14 @@ body {
   margin: -1px;
 }
 
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features-header {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -183,14 +211,31 @@ body {
 }
 
 .features-text {
+  min-width: 270px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
 /* сервисы */
+.services-section {
+  padding-top: 0;
+}
+
+.servises {
+  display: flex;
+}
+
+.servises-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .services-header,
 .team-header {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -199,7 +244,36 @@ body {
 }
 
 /* комманда */
+
+.team-section {
+  background-color: var(--secondary-background-color);
+}
+
+.team {
+  display: flex;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-item {
+  background-color: var(--secondary-text-color);
+  text-align: center;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-image {
+  display: block;
+}
+
 .team-name {
+  padding-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -208,6 +282,8 @@ body {
 }
 
 .team-position {
+  padding-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -216,7 +292,20 @@ body {
 /* страница портфолио */
 
 /* фильтр */
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
+  all: unset;
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -227,6 +316,7 @@ body {
   cursor: pointer;
 
   background-color: var(--secondary-background-color);
+  border-radius: 4px;
 }
 
 .filter-button:hover,
@@ -234,11 +324,38 @@ body {
   color: var(--secondary-text-color);
 
   background-color: var(--prime-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* примеры работ */
 
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--work-item-gap));
+  margin-bottom: calc(-1 * var(--work-item-gap));
+}
+
+.work-item {
+  flex-basis: calc(100% / 3 - var(--work-item-gap));
+  margin-right: var(--work-item-gap);
+  margin-bottom: var(--work-item-gap);
+
+  outline: 1px solid #eeeeee;
+}
+
+.work-image {
+  display: block;
+}
+
+.work-content {
+  padding: 20px 24px;
+}
+
 .work-header {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -256,8 +373,22 @@ body {
   background-color: var(--prime-background-color);
 }
 
+.footer-box {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .address {
   font-style: normal;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-link {
