@@ -16,15 +16,19 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--main-text-color);
 }
-/* 
-* инструменты
- */
 
 /* сброс стиля у списка */
-.list {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* сброс отступа у картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* сброс отступов */
@@ -105,8 +109,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.main-menu li:not(:last-child),
-.contacts-header li:not(:last-child) {
+.main-menu-item:not(:last-child),
+.contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -139,13 +143,11 @@ body {
 
 /* герой */
 .hero {
-  background-color: var(--prime-background-color);
-}
-
-.hero.container {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-color: var(--prime-background-color);
 }
 
 .hero-text {
@@ -266,12 +268,11 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-image {
-  display: block;
+.team-content {
+  padding: 30px 0;
 }
 
 .team-name {
-  padding-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -282,8 +283,6 @@ body {
 }
 
 .team-position {
-  padding-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -341,16 +340,14 @@ body {
   flex-basis: calc(100% / 3 - var(--work-item-gap));
   margin-right: var(--work-item-gap);
   margin-bottom: var(--work-item-gap);
-
-  outline: 1px solid #eeeeee;
-}
-
-.work-image {
-  display: block;
 }
 
 .work-content {
   padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .work-header {
@@ -370,17 +367,16 @@ body {
 
 /* футер */
 .footer {
-  background-color: var(--prime-background-color);
-}
-
-.footer-box {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--prime-background-color);
 }
 
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
 .address {
